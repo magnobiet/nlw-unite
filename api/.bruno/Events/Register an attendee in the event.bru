@@ -1,0 +1,22 @@
+meta {
+  name: Register an attendee in the event
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/events/{{eventId}}/attendees
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Magno Biét",
+    "email": "magno.biet102@gmail.com"
+  }
+}
+
+vars:pre-request {
+  eventId: 445ed340-32b2-48f0-a7d4-dd1ee50ea8d6
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Get event attenddes (query)
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/events/{{eventId}}/attendees?query=mag
+  body: none
+  auth: none
+}
+
+query {
+  query: mag
+}
+
+vars:pre-request {
+  eventId: 445ed340-32b2-48f0-a7d4-dd1ee50ea8d6
+}

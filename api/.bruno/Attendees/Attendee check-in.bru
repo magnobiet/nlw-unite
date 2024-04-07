@@ -1,0 +1,15 @@
+meta {
+  name: Attendee check-in
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/attendees/{{attendeeId}}/check-in
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  attendeeId: 1
+}
